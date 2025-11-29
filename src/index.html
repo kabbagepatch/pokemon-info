@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Info</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <form class="search-section" id="searchForm">
+        <input name="pokemon" type="text" id="searchInput" placeholder="Enter Pokémon name or ID..." />
+        <button type="submit" id="searchBtn">Search</button>
+      </form>
+
+      <div id="results" class="results-section" hidden>
+        <div class="primary-result">
+          <h1 id="pokemonName">Pokémon Name</h1>
+          <section class="data-section" id="pokemonType">
+            <div class="pokemonTypes"></div>
+          </section>
+          <img id="pokemonImage" src="" alt="Pokémon" />
+        </div>
+
+        <section class="data-section" id="weakAgainst">
+          <h3>Weak Against</h3>
+          <div class="pokemonTypes"></div>
+        </section>
+
+        <section class="data-section" id="strongAgainst">
+          <h3>Strong Against</h3>
+          <div class="pokemonTypes"></div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
