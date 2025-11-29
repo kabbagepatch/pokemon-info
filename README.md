@@ -1,7 +1,6 @@
-# Tauri + Vanilla
+# Pokemon Battle Info
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Javascript.
+Skip the type charts and calculations, and just get the info you need about which Pokemon to choose against an opponent
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+<img height="500" alt="image" src="https://github.com/user-attachments/assets/45ac84df-f0e5-4d60-bd31-8d52a7cae05c" />
+<img height="500" alt="image" src="https://github.com/user-attachments/assets/d2375cc1-c2e5-4117-9cc7-ec6da2d7c5b3" />
