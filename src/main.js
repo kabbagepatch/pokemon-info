@@ -2,6 +2,7 @@ const BASE_URL = 'https://pokeapi.co/api/v2';
 
 const pokemonInfo = {};
 const typesInfo = {};
+let currentPokemon = {};
 
 const getPokemonInfo = async (name) => {
   if (pokemonInfo[name]) return pokemonInfo[name];
@@ -66,6 +67,7 @@ const getTypeInfo = async (name) => {
 
 const populatePokemonInfo = async (name) => {
   const pokemon = await getPokemonInfo(name.toLowerCase())
+  currentPokemon = pokemon;
   const resultBlock = document.getElementById('results');
   resultBlock.hidden = false;
 
@@ -74,7 +76,7 @@ const populatePokemonInfo = async (name) => {
      return;
   }
 
-  document.getElementById('pokemonName').textContent = pokemon.displayName.split('-')[0];
+  document.getElementById('pokemonName').textContent = pokemon.displayName.split('-')[0] + " #" + pokemon.id;
   document.getElementById('pokemonImage').src = pokemon.image;
 
   const typesBlock = document.getElementById('pokemonType').getElementsByClassName('pokemonTypes')[0];
@@ -143,4 +145,19 @@ searchForm.addEventListener('submit', (e) =>{
   if (!pokemon) return;
   populatePokemonInfo(pokemon.trim());
   console.log(pokemon);
+});
+
+document.getElementById('prevButton').addEventListener('click', e => {
+  e.preventDefault();
+  const id = parseInt(currentPokemon.id, 10);
+  if (id <= 1) {
+    return;
+  }
+  populatePokemonInfo((id - 1).toString());
+});
+
+document.getElementById('nextButton').addEventListener('click', e => {
+  e.preventDefault();
+  const id = parseInt(currentPokemon.id, 10);
+  populatePokemonInfo((id + 1).toString());
 });

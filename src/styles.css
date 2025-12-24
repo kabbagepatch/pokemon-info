@@ -17,18 +17,22 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.container {
+body {
   margin: 0;
   padding-top: 2vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
+}
+
+.container {
+  max-width: 500px;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 input,
@@ -80,6 +84,26 @@ button {
   button:active {
     background-color: #0f0f0f69;
   }
+}
+
+#searchForm {
+  width: 100%;
+}
+
+#searchInput {
+  width: calc(100% - 150px);
+}
+
+#searchBtn {
+  width: 90px;
+}
+
+#name-container {
+  display: flex;
+  width: calc(100% - 20px);
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
 }
 
 #pokemonImage {
